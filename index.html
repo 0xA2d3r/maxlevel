@@ -90,7 +90,7 @@
         <div id="aiResponse"></div>
     </main>
 
-    <script src="config.js"></script>
+    <script src="secret.js"></script>
     <script>
         document.getElementById('goalForm').addEventListener('submit', async function(e) {
             e.preventDefault();
@@ -108,7 +108,7 @@ For each goal list activities the user will do to complete each sub-goal and how
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
-                        'Authorization': `Bearer ${config.OPENAI_API_KEY}`
+                        'Authorization': `Bearer ${secret.OPENAI_API_KEY}`
                     },
                     body: JSON.stringify({
                         model: "gpt-4o",
