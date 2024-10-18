@@ -90,9 +90,8 @@
         <div id="aiResponse"></div>
     </main>
 
+    <script src="config.js"></script>
     <script>
-        const OPENAI_API_KEY = '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'; // Replace with your actual API key
-
         document.getElementById('goalForm').addEventListener('submit', async function(e) {
             e.preventDefault();
             
@@ -109,7 +108,7 @@ For each goal list activities the user will do to complete each sub-goal and how
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
-                        'Authorization': `Bearer ${OPENAI_API_KEY}`
+                        'Authorization': `Bearer ${config.OPENAI_API_KEY}`
                     },
                     body: JSON.stringify({
                         model: "gpt-4o",
